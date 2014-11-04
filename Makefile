@@ -2,10 +2,11 @@
 #DEST	= ./plugin
 
 # Where are mysql libraries
-INCL	= -I/usr/src/mariadb-5.5.30/include/ -I/usr/include/mysql
+#INCL	= -I/usr/src/mariadb-5.5.30/include/ -I/usr/include/mysql
+INCL = -I/usr/local/Cellar/mysql/5.6.19/include/mysql/mysql -I/usr/local/Cellar/mysql/5.6.19/include/mysql
 
-TARGET = udf_math.so
-CFLAGS = -O2 -fPIC $(INCL) -DHAVE_DLOPEN=1
+TARGET = udf_math.so 
+CFLAGS = -O2 -fPIC $(INCL) -DHAVE_DLOPEN=1 
 
 
 SRCS = 	udf_colwidth.cc \
@@ -44,5 +45,5 @@ clean:
 	$(CXX) -o $@ $(CFLAGS) -c $<
 
 $(TARGET): $(OBJS)
-	$(LD) -shared -o $(TARGET) $(OBJS)
+	clang++ -shared -o $(TARGET) $(OBJS)
 
