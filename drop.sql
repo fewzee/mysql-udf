@@ -1,7 +1,10 @@
+/* DROP BEFORE DELETING THE .SO */
+
 DROP FUNCTION colwidth;
 DROP FUNCTION confidence_higher;
 DROP FUNCTION confidence_lower;
 DROP FUNCTION correlation;
+DROP FUNCTION spearman_rank_correlation;
 DROP FUNCTION faculty;
 DROP FUNCTION geomean;
 DROP FUNCTION intercept;
@@ -15,4 +18,3 @@ DROP FUNCTION stdnorm_density;
 DROP FUNCTION stdnorm_dist;
 DROP FUNCTION weightedavg;
 DROP FUNCTION steyx;
-

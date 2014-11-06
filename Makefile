@@ -13,6 +13,7 @@ SRCS = 	udf_colwidth.cc \
 	udf_confidence_higher.cc \
 	udf_confidence_lower.cc \
 	udf_correlation.cc \
+	udf_spearman_rank_correlation.cc \
 	udf_faculty.cc \
 	udf_geomean.cc \
 	udf_intercept.cc \
